@@ -27,20 +27,6 @@ public class Cruise {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Cruise(int id, Ship ship, Cruiseline cruiseline, String startdestination,
-			String enddestination, List<String> itinerary, Date startdate, Date enddate, String price) {
-		super();
-		this.id = id;
-		this.ship = ship;
-		this.cruiseline = cruiseline;
-		this.startdestination = startdestination;
-		this.enddestination = enddestination;
-		this.itinerary = itinerary;
-		this.startdate = startdate;
-		this.enddate = enddate;
-		this.price = price;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -111,6 +97,31 @@ public class Cruise {
 
 	public void setPrice(String price) {
 		this.price = price;
+	}
+	
+	private String cruiseName;
+
+	public Cruise(int id, Ship ship, Cruiseline cruiseline, String cruiseName, String startdestination,
+			String enddestination, List<String> itinerary, Date startdate, Date enddate, String price) {
+		super();
+		this.id = id;
+		this.ship = ship;
+		this.cruiseline = cruiseline;
+		this.cruiseName = cruiseName;
+		this.startdestination = startdestination;
+		this.enddestination = enddestination;
+		this.itinerary = itinerary;
+		this.startdate = startdate;
+		this.enddate = enddate;
+		this.price = price;
+	}
+
+	public String getCruiseName() {
+		return cruiseName;
+	}
+
+	public void setCruiseName(String cruiseName) {
+		this.cruiseName = cruiseName;
 	}
 
 	private String startdestination;
