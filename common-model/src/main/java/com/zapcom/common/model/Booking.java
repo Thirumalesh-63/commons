@@ -8,18 +8,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Booking")
 public class Booking {
-	
+
 	@Id
 	private int id;
-	
+
 	@DBRef
 	private User user;
-	
+
 	@DBRef
 	private Cruise cruise;
-	
+
 	private Date bookingDate;
-	
+
 	private String Payment;
 
 	public int getId() {
@@ -75,7 +75,5 @@ public class Booking {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 }
